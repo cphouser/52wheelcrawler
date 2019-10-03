@@ -24,6 +24,7 @@ def main():
         if more is False:
             break
         next_page(driver)
+    print(*result_tups, sep='\n')
     driver.quit()
 
 def results_from_page(driver, reference_dict, end_date):
@@ -43,9 +44,9 @@ def results_from_page(driver, reference_dict, end_date):
         matches = check_matches(result, reference_dict)
         for match in matches:
             print(match)
-        else: print("no matches for", result)
+        else: pass #print("no matches for", result)
         if len(matches) > 0:
-            result.append(matching_results)
+            matching_results.append(result)
     return (matching_results, True)
         
 def check_matches(listing, ref_dict):
@@ -57,16 +58,18 @@ def check_matches(listing, ref_dict):
         ref_makes = ref_dict[make]
         matches = []
         for ref_make in ref_makes:
-            make_words = make.split()
-            if all([ref_make[0].find(word) > 0 for word in make_words]) \
+            model_words = model.split()
+            #print(year, model_words, '  in   ', ref_make[0])
+            #print([ref_make[0].find(word) >= 0 for word in model_words]) 
+            if all([ref_make[0].find(word) >= 0 for word in model_words]) \
                     and in_year_range(year, ref_make[1], ref_make[2]):
-                matches.append(ref_make)
-                print(ref_make)
+                matches.append((listing[1], listing[2], *ref_make))
+                print(year, model_words, '  in   ', ref_make)
         return matches
 
 def in_year_range(year, min_y, max_y):
-    if int(year) >= min_y and int(year) <= max_y: return True
-    else: return False
+    if int(year) >= int(min_y) and int(year) <= int(max_y): print("in range");return True
+    else: print("not in range");return False
 
 
 def load_car_table(filen):
