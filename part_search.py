@@ -85,7 +85,7 @@ def load_car_table(filen):
 
 def next_page(driver):
     next_btn = driver.find_element_by_xpath("//input[@value='NEXT']")
-    next_btn.submit()
+    next_btn.click()
 
 def fetch_page(driver):
     result_list = driver.find_elements_by_class_name('list-row')
