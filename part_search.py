@@ -17,7 +17,9 @@ def init():
 def main():
     driver = init()
     reference_dict = load_car_table('cars.csv')
-    driver.get('https://row52.com/Search/Index?Page=1&MakeId=0&ModelId=0&Year=&Distance=50&Sort=dateadded&SortDirection=desc&ZipCode=95403&HasImage=&HasComment=&LocationId=&V1=&V2=&V3=&V4=&V5=&V6=&V7=&V8=&V9=&V10=&V11=&V12=&V13=&V14=&V15=&V16=&V17=&IsVin=false')
+    with open('search_url') as f:
+        url = f.read()
+    driver.get(url)
     end_date = datetime.datetime.strptime(sys.argv[1],'%m/%d/%y')
     while True:
         result_tups, more = results_from_page(driver, reference_dict, end_date)
