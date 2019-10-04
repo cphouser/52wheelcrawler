@@ -16,13 +16,13 @@ Create a CSV file named cars.csv (or modify the one included in the repository) 
 ###### Format:
 "MAKE MODEL_KEYWORDS",min_year,max_year,[notes] (last field unchecked but is returned with any matched listing)
 *note: make and model keywords must be capitalized*
-'''
+```
 "DODGE RAIDER",1986,1989,"15 X 6,12 X 1.5,108"
 "FORD COURIER PICKUP",1977,1984,"14 X 6,12 X 1.5,108.0"
 "HONDA PASSPORT",1994,2003,"15 X 6,12 X 1.5,108"
 "HUMMER H3, H3X, H3 ALPHA, BASE, LUXURY",2006,2008,"12 X 1.5,100.0"
 "HYUNDAI ENTOURAGE",2007,2008,"12 X 1.5,95.3"
-'''
+```
 It is important that the make is a single word and separated from the model keywords by a space. The only make this should effect is "ALFA ROMEO". The included table was generated using [this list](http://www.wheelsupport.com/bolt-pattern-stud-pattern-6-x-139-7/), Sublime Text 3, and the Python 3 shell. A similar file can be written manually in excel or a similar program (export as csv).
 
 ## Running:
