@@ -31,3 +31,18 @@ It is important that the make is a single word and separated from the model keyw
 on Debian: 
 ```python3 part_search.py mm/dd/yy``` 
 where mm/dd/yy is the earliest date to return results from. This argument must be specified.
+
+#### Output:
+Results are printed to console.
+```
+pi@raspberrypi:~/4wdcrawler $ python3 part_search.py 9/30/19
+display started
+driver loaded
+page retrieved
+page retrieved
+page retrieved
+in range
+1993 ['PICKUP']   in    ('PICKUP, 4 RUNNER', '1980', '1995', '15 X 7,12 X 1.5,106.0')
+('Oct 02, 2019', 'https://row52.com/Vehicle/Index/4TARN81A4PZ105642', 'PICKUP, 4 RUNNER', '1980', '1995', '15 X 7,12 X 1.5,106.0')
+page retrieved
+'''
