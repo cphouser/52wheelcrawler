@@ -28,4 +28,5 @@ Create a CSV file named cars.csv (or modify the one included in the repository) 
 It is important that the make is a single word and separated from the model keywords by a space. The included table was generated using [this list](http://www.wheelsupport.com/bolt-pattern-stud-pattern-6-x-139-7/), Sublime Text 3, and the Python 3 shell. A similar file can be written manually in excel or a similar program (export as csv).
 
 ## Running:
-on Debian: *python3 part_search.py mm/dd/yy* where mm/dd/yy is the earliest date to return results from. This argument must be specified.
+on Debian: 
+```python3 part_search.py mm/dd/yy``` where mm/dd/yy is the earliest date to return results from. This argument must be specified.
