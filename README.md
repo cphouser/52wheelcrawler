@@ -1,4 +1,4 @@
-# Python script for finding wheels on row52.com
+# Python Script for Finding Wheels on row52.com
 
 ## Requirements:
 * Selenium (tested with v2.53.2)
