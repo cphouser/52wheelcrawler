@@ -13,7 +13,7 @@
 2. Copy this url into an otherwise empty file and save as **search_url** (no file extension) in the same directoy as **part_search.py**
  
 ### Set Up Table of Vehicles
-Create a CSV file named cars.csv (or modify the one included in the repository) with a list of all vehicles to search for and save it in same directory as **search_url** and **part_search.py** other files.
+Create a CSV file named cars.csv (or modify the one included in the repository) with a list of all vehicles to search for and save it in same directory as **search_url** and **part_search.py**.
 
 #### Format:
 "MAKE MODEL_KEYWORDS",min_year,max_year,[notes] (last field unchecked but is returned with any matched listing)
