@@ -4,7 +4,8 @@
 * Selenium (tested with v2.53.2)
   * compatible browser and driver for browser (tested with Chromium v27.0.3626.121 and ChromeDriver v72.0.3626.121)
 * Python3 (tested with v3.5.3)
-* *compatibility note: script is configured to run on a headless raspberry pi using a virtual display and attempts to use pyvirtualdisplay with xvfb. [Install Instructions](http://www.knight-of-pi.org/python3-browser-tests-on-a-raspberry-pi-with-firefox-virtualdisplay-selenium-and-pytest/)*
+
+*compatibility note: script is configured to run on a headless raspberry pi using a virtual display and attempts to use pyvirtualdisplay with xvfb. [Install Instructions](http://www.knight-of-pi.org/python3-browser-tests-on-a-raspberry-pi-with-firefox-virtualdisplay-selenium-and-pytest/)*
 
 ## Setup:
 ### Set Search URL
@@ -13,7 +14,8 @@
  
 ### Set Up Table of Vehicles
 Create a CSV file named cars.csv (or modify the one included in the repository) with a list of all vehicles to search for and save it in same directory as **search_url** and **part_search.py** other files.
-###### Format:
+
+#### Format:
 "MAKE MODEL_KEYWORDS",min_year,max_year,[notes] (last field unchecked but is returned with any matched listing)
 *note: make and model keywords must be capitalized*
 ```
